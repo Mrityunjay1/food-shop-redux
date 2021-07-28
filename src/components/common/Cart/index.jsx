@@ -1,9 +1,21 @@
 import React from 'react'
-
-export default function Cart() {
+import { connect } from 'react-redux';
+import { useHistory } from 'react-router'
+import { createStructuredSelector } from 'reselect';
+import { selectCartItemsCount } from '../../../redux/cart/cartSelector';
+import './index.css'
+function Cart({cartCount}) {
+    const history = useHistory();
     return (
-        <div>
-            <h1>This is cart</h1>
+        <div className="btnCartCount" onClick={()=>history.push('/cart')}>
+            <div className="count">
+                {cartCount >=100 ? '99+' : cartCount}</div>
+                <i className="fas fa-shopping-cart"></i>
         </div>
     )
 }
+
+const mapStateToProps = createStructuredSelector({
+    cartCount:selectCartItemsCount
+});
+export default connect(mapStateToProps)( Cart); 

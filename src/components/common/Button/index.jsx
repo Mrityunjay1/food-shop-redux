@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './index.css'
 export default function Button({quantity,handleAddItem,handleRemoveItem}) {
     return (
         <div className="btnAddRemove">

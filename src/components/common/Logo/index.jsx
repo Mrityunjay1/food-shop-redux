@@ -7,10 +7,10 @@ export default function Logo() {
         <div className="logo">
             <div>
                 <img src={logoPng} alt="logo" />
-                <span><b>7th Street</b></span>
+                <span><b>Shop</b></span>
             </div>
             <div>
-                <p><b>Cuisine</b></p>
+                <p><b>Lets's Go</b></p>
             </div>
         </div>
     )
